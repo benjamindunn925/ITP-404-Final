@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="maps">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="bootstrap-3.3.6-dist/css/bootstrap.css">
+    <title>Final Project</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="mainContainer">
+</div>
+<div id="centerContainer">
+    <div id="relativeContainer">
+        <div id="content">
+            <div id="loader">
+                <h4 id="greeting" style="text-align: center;">Hold tight, we'll shortly!</h4>
+                <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                </div>
+                <br/>
+                <br/>
+                <p id="enter"  style="text-align: center;">
+                    <input  type="button"  class="btn btn-primary btn-lg" value="Enter" ng-click="toggle = !toggle" onclick="initMap()">
+                </p>
+
+            </div>
+            <div id = "container"  ng-show="toggle">
+                <h1>L.A. Venue Locator</h1>
+                <div id = "map">
+                </div>
+                <div id = "search" ng-view>
+                </div>
+                <div id = "directions">
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAvjFUvwIwFkC27qepvkUNBXlbz7kkvTM"></script>
+<script src="jquery.js"></script>
+<script src="main.js"></script>
+<script src="maps.js"></script>
+<script src="angular.js"></script>
+</body>
+</html>

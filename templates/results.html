@@ -1,0 +1,15 @@
+<div>
+    <input type="button"  class="btn btn-primary" value="Do another search" ng-click="vm.goBack()">
+    <div ng-repeat="venues in vm.venuesList">
+        <div ng-click="vm.display(venues)">
+            <hr>
+            <p>Name: {{venues.name}}</p>
+            <p>Address: {{venues.location.address}}</p>
+            <p>Type: {{venues.categories[0].name}}</p>
+            <p onclick="slideIn()" ng-click="vm.getDirections(venues)">Get Directions</p>
+        </div>
+    </div>
+    <hr>
+</div>
+
+
