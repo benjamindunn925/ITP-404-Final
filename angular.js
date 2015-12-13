@@ -2,6 +2,11 @@ var app = angular.module('maps', ['ngRoute', ]);
 
 app.config(function($routeProvider) {
     $routeProvider
+        .when('/', {
+            templateUrl: 'templates/search.html',
+            controller: 'searchController',
+            controllerAs: 'vm'
+        })
         .when('/search', {
             templateUrl: 'templates/search.html',
             controller: 'searchController',
@@ -88,6 +93,10 @@ app.controller('venueListController', function(mapsFactory, $routeParams, $locat
         }
         $location.url("/search/");
         directionsDisplay.setMap(null);
+        directionsDisplay.set('directions', null);
+        directionsDisplay = new google.maps.DirectionsRenderer;
+        directionsService = new google.maps.DirectionsService;
+        directionsDisplay.setMap(map);
 
     };
 });

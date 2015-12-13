@@ -61,7 +61,9 @@ html, body{
     float: left;
     height: 600px;
     overflow: auto;
+
 }
+
 
 #directions{
     margin-left: 10px;
