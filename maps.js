@@ -118,7 +118,7 @@ function initMap(){
     center = new google.maps.LatLng(34.0500, -118.2500);
     map = new google.maps.Map(document.getElementById('map'),{
         center: center,
-        zoom:11
+        zoom:13
     });
     map.setOptions({styles: styles});
     infoWindowHolder = [];
